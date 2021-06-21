@@ -22,6 +22,18 @@ public class Main {
 
         String formattedDate = my.format(myFormatObj);
         System.out.println("After formatting: " + formattedDate);
+        
+        LocalTime lTime_1 = LocalTime.now();
+
+        Thread.sleep(5000);
+
+        LocalTime lTime_2 = LocalTime.now();
+
+        Duration diff = Duration.between(lTime_2, lTime_1);
+
+        long dur = diff.toMillis();
+
+        System.out.println(diff);
 
     }
 
